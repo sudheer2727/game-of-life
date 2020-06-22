@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    parameters {
+ /*   parameters {
         gitParameter name: 'PULL_REQUESTS', 
                      type: 'PT_PULL_REQUEST',
                      defaultValue: '1',
                      sortMode: 'DESCENDING_SMART'
-    }
+    } */
     stages {
      /*   stage('Example') {
             steps {
