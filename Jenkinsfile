@@ -6,8 +6,10 @@ pipeline {
                      defaultValue: '1',
                      sortMode: 'DESCENDING_SMART'
     }
+    // stage test
+    
     stages {
-        stage('Example') {
+        stage('checkout') {
             steps {
                 checkout([$class: 'GitSCM', 
                 branches: [[name: "pr/${params.PULL_REQUESTS}/head"]], 
