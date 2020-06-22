@@ -7,7 +7,7 @@ pipeline {
                      sortMode: 'DESCENDING_SMART'
     }
     stages {
-        stage('Example') {
+     /*   stage('Example') {
             steps {
                 checkout([$class: 'GitSCM', 
                 branches: [[name: "pr/${params.PULL_REQUESTS}/head"]], 
@@ -17,7 +17,7 @@ pipeline {
                 submoduleCfg: [], 
                 userRemoteConfigs: [[refspec: '+refs/pull/*:refs/remotes/origin/pr/*', url: 'https://github.com/jenkinsci/git-parameter-plugin.git']]])
             }
-        }
+        } */
         
         stage('Build') {
             steps {
