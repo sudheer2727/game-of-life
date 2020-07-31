@@ -34,3 +34,17 @@ stages:
 
         - upload: $(Build.ArtifactStagingDirectory)
           artifact: drop
+          
+          
+- stage: deployDev
+  displayName: deployDev
+  jobs:
+  - deployment:
+    displayName: deployDev
+    environment: Dev-gameoflife
+    strategy:
+      runOnce:
+        deploy:
+          steps:               
+            - script: echo "Dev deployment"
+              displayName: Dev deployment                  
