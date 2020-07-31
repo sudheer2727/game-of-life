@@ -36,15 +36,15 @@ stages:
           artifact: drop
           
           
-- stage: deployDev
-  displayName: deployDev
-  jobs:
-  - deployment:
+  - stage: deployDev
     displayName: deployDev
-    environment: Dev-gameoflife
-    strategy:
-      runOnce:
-        deploy:
-          steps:               
-            - script: echo "Dev deployment"
-              displayName: Dev deployment                  
+    jobs:
+    - deployment:
+      displayName: deployDev
+      environment: Dev-gameoflife
+      strategy:
+        runOnce:
+          deploy:
+            steps:               
+              - script: echo "Dev deployment"
+                displayName: Dev deployment                  
