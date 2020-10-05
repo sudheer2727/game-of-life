@@ -30,7 +30,7 @@ stages:
              SourceFolder: '$(System.DefaultWorkingDirectory)'
              Contents: |
                **/target/*.?(war|jar)
-               **/iac/*
+               iac/**
              TargetFolder: $(Build.ArtifactStagingDirectory)
 
         - upload: $(Build.ArtifactStagingDirectory)
